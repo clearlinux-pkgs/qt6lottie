@@ -6,17 +6,16 @@
 # autospec commit: c02b2fe
 #
 Name     : qt6lottie
-Version  : 6.6.2
-Release  : 14
-URL      : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtlottie-everywhere-src-6.6.2.tar.xz
-Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtlottie-everywhere-src-6.6.2.tar.xz
+Version  : 6.6.3
+Release  : 15
+URL      : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtlottie-everywhere-src-6.6.3.tar.xz
+Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtlottie-everywhere-src-6.6.3.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause GFDL-1.3 GPL-3.0
 Requires: qt6lottie-lib = %{version}-%{release}
 Requires: qt6lottie-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
-BuildRequires : mesa-dev
 BuildRequires : qt6base-dev
 BuildRequires : qt6declarative-dev
 # Suppress stripping binaries
@@ -55,15 +54,15 @@ license components for the qt6lottie package.
 
 
 %prep
-%setup -q -n qtlottie-everywhere-src-6.6.2
-cd %{_builddir}/qtlottie-everywhere-src-6.6.2
+%setup -q -n qtlottie-everywhere-src-6.6.3
+cd %{_builddir}/qtlottie-everywhere-src-6.6.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711164342
+export SOURCE_DATE_EPOCH=1711483029
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -124,7 +123,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711164342
+export SOURCE_DATE_EPOCH=1711483029
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6lottie
 cp %{_builddir}/qtlottie-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6lottie/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -146,33 +145,33 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/beziereasing_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmbase_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmbasictransform_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmconstants_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmellipse_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmfill_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmfilleffect_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmfreeformshape_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmgfill_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmgroup_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmimage_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmimagelayer_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmlayer_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmpathtrimmer_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmproperty_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmrect_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmrepeater_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmrepeatertransform_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmround_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmshape_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmshapelayer_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmshapetransform_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmspatialproperty_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmstroke_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/bmtrimpath_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/lottierenderer_p.h
-/usr/include/QtBodymovin/6.6.2/QtBodymovin/private/trimpath_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/beziereasing_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmbase_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmbasictransform_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmconstants_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmellipse_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmfill_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmfilleffect_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmfreeformshape_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmgfill_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmgroup_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmimage_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmimagelayer_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmlayer_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmpathtrimmer_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmproperty_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmrect_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmrepeater_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmrepeatertransform_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmround_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmshape_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmshapelayer_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmshapetransform_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmspatialproperty_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmstroke_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/bmtrimpath_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/lottierenderer_p.h
+/usr/include/QtBodymovin/6.6.3/QtBodymovin/private/trimpath_p.h
 /usr/include/QtBodymovin/QtBodymovin
 /usr/include/QtBodymovin/QtBodymovinDepends
 /usr/include/QtBodymovin/QtBodymovinVersion
@@ -199,10 +198,10 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libQt6Bodymovin.so.6.6.2
+/V3/usr/lib64/libQt6Bodymovin.so.6.6.3
 /V3/usr/lib64/qt6/qml/Qt/labs/lottieqt/liblottieqtplugin.so
 /usr/lib64/libQt6Bodymovin.so.6
-/usr/lib64/libQt6Bodymovin.so.6.6.2
+/usr/lib64/libQt6Bodymovin.so.6.6.3
 /usr/lib64/qt6/metatypes/qt6bodymovinprivate_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/modules/BodymovinPrivate.json
 /usr/lib64/qt6/qml/Qt/labs/lottieqt/liblottieqtplugin.so
