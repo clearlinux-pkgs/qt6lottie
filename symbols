@@ -29,6 +29,7 @@ libQt6Bodymovin.so.6:BMPathTrimmer::BMPathTrimmer(BMBase*)@@Qt_6
 libQt6Bodymovin.so.6:BMPathTrimmer::addTrim(BMTrimPath*)@@Qt_6
 libQt6Bodymovin.so.6:BMPathTrimmer::applyTrim(BMShape*)@@Qt_6
 libQt6Bodymovin.so.6:BMPathTrimmer::updateProperties(int)@@Qt_6
+libQt6Bodymovin.so.6:BMPolyStar::updateProperties(int)@@Qt_6
 libQt6Bodymovin.so.6:BMRect::updateProperties(int)@@Qt_6
 libQt6Bodymovin.so.6:BMRepeater::updateProperties(int)@@Qt_6
 libQt6Bodymovin.so.6:BMRepeaterTransform::setInstanceCount(int)@@Qt_6
